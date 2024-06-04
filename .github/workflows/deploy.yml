@@ -38,7 +38,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Check running docker containers
-        run: echo "docker ps"  
+        run: docker ps  
       - name: Run server
         run: npm start & npx wait-on http://127.0.0.1:$PORT
       - name: Run tests
